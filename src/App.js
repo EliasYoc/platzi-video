@@ -10,7 +10,23 @@ function App() {
     <div className="App">
       <Header />
       <Search />
-      <Categories>
+      <Categories title="mi lista">
+        <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </Carousel>
+      </Categories>
+      <Categories title="popular">
+        <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </Carousel>
+      </Categories>
+      <Categories title="Plats">
         <Carousel>
           <CarouselItem />
           <CarouselItem />
