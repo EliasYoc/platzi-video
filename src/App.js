@@ -1,42 +1,21 @@
-import Header from "./componentes/Header";
-import "./assets/styles/App.scss";
-import Search from "./componentes/Search";
-import Categories from "./componentes/Categories";
-import Carousel from "./componentes/Carousel";
-import CarouselItem from "./componentes/CarouselItem";
-import Footer from "./componentes/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Layout from "./componentes/Layout";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Search />
-      <Categories title="mi lista">
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-      <Categories title="popular">
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-      <Categories title="Plats">
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-      <Footer />
-    </div>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route path="*" component={() => <h1>Not found</h1>} />
+        </Switch>
+      </Layout>
+    </Router>
   );
 }
 
