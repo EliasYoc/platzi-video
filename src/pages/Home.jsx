@@ -4,7 +4,6 @@ import Carousel from "../componentes/Carousel";
 import CarouselItem from "../componentes/CarouselItem";
 import Categories from "../componentes/Categories";
 import Search from "../componentes/Search";
-import { useFetchState } from "../hooks/useFetchState";
 
 // const API = "http://localhost:3000/initialState";
 
